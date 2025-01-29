@@ -1,0 +1,11 @@
+spring.application.name=learn-spring-boot
+
+#trace -> all information
+#debug -> a lot of information
+#info
+#warning
+#error -> only errors and exceptions
+#off
+logging.level.org.springframework=info
+
+spring.profiles.active=prod

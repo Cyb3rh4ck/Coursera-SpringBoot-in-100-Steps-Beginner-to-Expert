@@ -1,0 +1,20 @@
+spring.application.name=learn-spring-boot
+
+#trace -> all information
+#debug -> a lot of information
+#info
+#warning
+#error -> only errors and exceptions
+#off
+logging.level.org.springframework=info
+
+#if not profile active Spring Boot use de default properties
+#spring.profiles.active=dev
+
+currency-service.url=http://default.codigojava.com
+currency-service.username=defaultUsername
+currency-service.key=defaultKey
+
+# actuator enabled all endpoints
+#management.endpoints.web.exposure.include=*
+management.endpoints.web.exposure.include=health,metrics
