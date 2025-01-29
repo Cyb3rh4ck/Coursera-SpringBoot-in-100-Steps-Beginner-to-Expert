@@ -1,8 +1,0 @@
-
-}
-java:S6813"BRemove this field injection and use constructor injection instead.8Ý†­üÊ2b 0132ec8cee01c5dd244e1a60fe6448a1h
-h
-java:S1128"-Remove this unused import 'java.util.Arrays'.8Ý†­üÊ2b 54e9e610d6bdce198c93f75733e99130h
-‘
-java:S1128
-"VRemove this unused import 'com.codigojava.springboot.learn_spring_boot.models.Course'.8Ý†­üÊ2b 2f3b070499e1733e46c691cf31dcb28bh
