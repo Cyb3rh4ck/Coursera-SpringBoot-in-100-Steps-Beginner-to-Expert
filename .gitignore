@@ -23,3 +23,13 @@
 hs_err_pid*
 replay_pid*
 /.metadata/
+
+#Eclipse
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+.metadata
