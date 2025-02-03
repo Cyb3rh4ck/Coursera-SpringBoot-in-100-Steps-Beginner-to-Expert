@@ -29,5 +29,10 @@ public class SayHelloController {
 		
 		return sb.toString();
 	}
+	
+	@GetMapping("say-hello-jsp")
+	public String sayHelloJsp() {
+		return "sayHello";
+	}
 
 }
