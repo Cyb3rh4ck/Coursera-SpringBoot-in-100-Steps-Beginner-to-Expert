@@ -3,5 +3,6 @@
 		<title>Login Page</title>
 	<head>
 	<body>
-		Welcome to the login page!
+		<div>Welcome to the login page!</div>
+		<div>Your Name: ${name}</div>
 <html>
