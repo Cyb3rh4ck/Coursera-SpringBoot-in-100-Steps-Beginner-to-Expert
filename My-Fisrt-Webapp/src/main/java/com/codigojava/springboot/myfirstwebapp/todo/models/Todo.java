@@ -6,7 +6,7 @@ public class Todo {
 	
 	private int id;
 	private String username;
-	private String descriptiion;
+	private String description;
 	private LocalDate targetDate;
 	private boolean done;
 	
@@ -14,7 +14,7 @@ public class Todo {
 		super();
 		this.id = id;
 		this.username = username;
-		this.descriptiion = descriptiion;
+		this.description = descriptiion;
 		this.targetDate = targetDate;
 		this.done = done;
 	}
@@ -35,12 +35,12 @@ public class Todo {
 		this.username = username;
 	}
 
-	public String getDescriptiion() {
-		return descriptiion;
+	public String getDescription() {
+		return description;
 	}
 
-	public void setDescriptiion(String descriptiion) {
-		this.descriptiion = descriptiion;
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
 	public LocalDate getTargetDate() {
@@ -61,7 +61,7 @@ public class Todo {
 
 	@Override
 	public String toString() {
-		return "Todo [id=" + id + ", username=" + username + ", descriptiion=" + descriptiion + ", targetDate="
+		return "Todo [id=" + id + ", username=" + username + ", descriptiion=" + description + ", targetDate="
 				+ targetDate + ", done=" + done + "]";
 	}
 	
