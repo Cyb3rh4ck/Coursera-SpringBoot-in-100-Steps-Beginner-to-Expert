@@ -4,7 +4,6 @@ package com.codigojava.springboot.myfirstwebapp.todo.controllers;
 import java.time.LocalDate;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -12,6 +11,8 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.codigojava.springboot.myfirstwebapp.todo.models.Todo;
 import com.codigojava.springboot.myfirstwebapp.todo.services.TodoService;
+
+import jakarta.validation.Valid;
 
 @Controller
 @SessionAttributes("name")
@@ -32,13 +33,13 @@ public class TodoController {
 	@GetMapping("add-todo")
 	public String showNewTodoPage(ModelMap model) {
 		String username = (String)model.getAttribute("username");
-		Todo todo = new Todo(0, username, "Defatul Desc", LocalDate.now().plusYears(1), false);
+		Todo todo = new Todo(0, username, "Default Desc", LocalDate.now().plusYears(1), false);
 		model.put("todo", todo);
 		return "todo";
 	}
 	
 	@PostMapping("add-todo")
-	public String addNewTodo(ModelMap model, Todo todo) {
+	public String addNewTodo(ModelMap model, @Valid Todo todo) {
 		todoService.addTodo(model.getAttribute("name").toString(), todo.getDescription(), LocalDate.now().plusMonths(8), false);
 		return "redirect:list-todos";
 	}
