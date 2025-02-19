@@ -46,7 +46,7 @@ public class TodoController {
 		if(result.hasErrors()) {
 			return "todo";
 		}
-		todoService.addTodo(model.getAttribute("name").toString(), todo.getDescription(), LocalDate.now().plusMonths(8), false);
+		todoService.addTodo(model.getAttribute("name").toString(), todo.getDescription(), todo.getTargetDate(), false);
 		return "redirect:list-todos";
 	}
 	
