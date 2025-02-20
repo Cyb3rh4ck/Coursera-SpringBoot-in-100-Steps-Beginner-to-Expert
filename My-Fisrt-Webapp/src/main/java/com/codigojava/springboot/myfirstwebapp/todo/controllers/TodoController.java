@@ -29,7 +29,8 @@ public class TodoController {
 	
 	@GetMapping("list-todos")
 	public String listAllTodos(ModelMap model) {
-		model.addAttribute("todos",todoService.findByUsername("CodigoJava"));
+		String username = (String)model.getAttribute("username");
+		model.addAttribute("todos",todoService.findByUsername(username));
 		return "listTodos";
 	}
 	
